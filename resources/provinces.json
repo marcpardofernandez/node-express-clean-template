@@ -1,0 +1,210 @@
+[
+  {
+    "code": "04",
+    "label": "almeria"
+  },
+  {
+    "code": "11",
+    "label": "cadiz"
+  },
+  {
+    "code": "14",
+    "label": "cordoba"
+  },
+  {
+    "code": "18",
+    "label": "granada"
+  },
+  {
+    "code": "21",
+    "label": "huelva"
+  },
+  {
+    "code": "23",
+    "label": "jaen"
+  },
+  {
+    "code": "29",
+    "label": "malaga"
+  },
+  {
+    "code": "41",
+    "label": "sevilla"
+  },
+  {
+    "code": "22",
+    "label": "huesca"
+  },
+  {
+    "code": "44",
+    "label": "teruel"
+  },
+  {
+    "code": "50",
+    "label": "zaragoza"
+  },
+  {
+    "code": "33",
+    "label": "asturias"
+  },
+  {
+    "code": "07",
+    "label": "baleares"
+  },
+  {
+    "code": "35",
+    "label": "las_palmas"
+  },
+  {
+    "code": "38",
+    "label": "tenerife"
+  },
+  {
+    "code": "39",
+    "label": "cantabria"
+  },
+  {
+    "code": "05",
+    "label": "avila"
+  },
+  {
+    "code": "09",
+    "label": "burgos"
+  },
+  {
+    "code": "24",
+    "label": "leon"
+  },
+  {
+    "code": "34",
+    "label": "salencia"
+  },
+  {
+    "code": "37",
+    "label": "salamanca"
+  },
+  {
+    "code": "40",
+    "label": "segovia"
+  },
+  {
+    "code": "42",
+    "label": "soria"
+  },
+  {
+    "code": "47",
+    "label": "valladolid"
+  },
+  {
+    "code": "49",
+    "label": "zamora"
+  },
+  {
+    "code": "02",
+    "label": "albacete"
+  },
+  {
+    "code": "13",
+    "label": "ciudad_real"
+  },
+  {
+    "code": "16",
+    "label": "cuenca"
+  },
+  {
+    "code": "19",
+    "label": "guadalajara"
+  },
+  {
+    "code": "45",
+    "label": "toledo"
+  },
+  {
+    "code": "08",
+    "label": "barcelona"
+  },
+  {
+    "code": "17",
+    "label": "girona"
+  },
+  {
+    "code": "25",
+    "label": "lleida"
+  },
+  {
+    "code": "43",
+    "label": "tarragona"
+  },
+  {
+    "code": "03",
+    "label": "alicante"
+  },
+  {
+    "code": "12",
+    "label": "castellon"
+  },
+  {
+    "code": "46",
+    "label": "valencia"
+  },
+  {
+    "code": "06",
+    "label": "badajoz"
+  },
+  {
+    "code": "10",
+    "label": "caceres"
+  },
+  {
+    "code": "15",
+    "label": "la_coruna"
+  },
+  {
+    "code": "27",
+    "label": "lugo"
+  },
+  {
+    "code": "32",
+    "label": "ourense"
+  },
+  {
+    "code": "36",
+    "label": "pontevedra"
+  },
+  {
+    "code": "28",
+    "label": "madrid"
+  },
+  {
+    "code": "30",
+    "label": "murcia"
+  },
+  {
+    "code": "31",
+    "label": "navarra"
+  },
+  {
+    "code": "01",
+    "label": "araba"
+  },
+  {
+    "code": "48",
+    "label": "bizkaia"
+  },
+  {
+    "code": "20",
+    "label": "gipuzkoa"
+  },
+  {
+    "code": "26",
+    "label": "la_rioja"
+  },
+  {
+    "code": "51",
+    "label": "ceuta"
+  },
+  {
+    "code": "52",
+    "label": "melilla"
+  }
+]
