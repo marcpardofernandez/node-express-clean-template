@@ -13,6 +13,7 @@ const app: Application = express();
 const port = process.env.PORT || 8000;
 const routes: Routes = container.get(TOKENS.routes);
 app.use(cors());
+app.use(express.json());
 app.use(session(sessionOptions));
 app.use(routes.getRouter());
 

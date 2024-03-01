@@ -20,7 +20,7 @@ class Controller {
       console.log(`/`);
       const dbElements: number = await this.useCases.countDatabaseEntries();
       res.send(
-        `Welcome to Spanish Home Finder Server. \n` +
+        `Welcome to node-express-clean-template. \n` +
           `Your session id is ${req.sessionID}. \n` +
           `Database elements: ${dbElements}.`
       );
