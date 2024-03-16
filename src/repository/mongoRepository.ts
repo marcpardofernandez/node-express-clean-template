@@ -1,4 +1,4 @@
-import mongoose, { Model, connect } from "mongoose";
+import mongoose, { Model } from "mongoose";
 import dotenv from "dotenv";
 import { MongoOutputPort } from "../useCases/mongoOutputPort";
 import { MongoObject } from "../entities/mongoObject";
@@ -7,15 +7,15 @@ import { MongoClient } from "mongodb";
 
 dotenv.config();
 
-class MongoGateway implements MongoOutputPort {
+class mongoRepository implements MongoOutputPort {
   private static connected: boolean = false;
 
   constructor() {
-    if (!MongoGateway.connected) {
-      MongoGateway.connect();
+    if (!mongoRepository.connected) {
+      mongoRepository.connect();
     }
     process.on("exit", () => {
-      MongoGateway.disconnect();
+      mongoRepository.disconnect();
     });
   }
 
@@ -56,7 +56,7 @@ class MongoGateway implements MongoOutputPort {
         throw new Error("MongoDB connection URL not found in the .env file");
       }
       await mongoose.connect(databaseUrl);
-      MongoGateway.connected = true;
+      mongoRepository.connected = true;
       console.log("Connected to MongoDB.");
     } catch (error) {
       console.error("Error connecting to MongoDB:", error);
@@ -66,16 +66,16 @@ class MongoGateway implements MongoOutputPort {
 
   private static async disconnect(): Promise<void> {
     await mongoose.disconnect();
-    MongoGateway.connected = false;
+    mongoRepository.connected = false;
     console.log("Disconnected from MongoDB.");
   }
 
   static async getConection(): Promise<MongoClient> {
-    if (!MongoGateway.connected) {
-      await MongoGateway.connect();
+    if (!mongoRepository.connected) {
+      await mongoRepository.connect();
     }
     return mongoose.connection.getClient();
   }
 }
 
-export { MongoGateway };
+export { mongoRepository };
