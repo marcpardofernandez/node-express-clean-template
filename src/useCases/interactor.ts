@@ -2,7 +2,7 @@ import { MongoOutputPort } from "./mongoOutputPort";
 import { injected } from "brandi";
 import { TOKENS } from "../tokens";
 import { InputPort } from "./inputPort";
-import { MongoObject } from "../entities/mongoObject";
+import { IData, Data } from "../entities/Data";
 
 class Interactor implements InputPort {
   private mongoOutputPort: MongoOutputPort;
@@ -12,7 +12,7 @@ class Interactor implements InputPort {
   }
 
   async registerMessage(id: string, message: string): Promise<void> {
-    const object: MongoObject = new MongoObject(id, message);
+    const object: IData = new Data({id: id, message: message});
     await this.mongoOutputPort.registerMessage(object);
   }
 
@@ -25,7 +25,7 @@ class Interactor implements InputPort {
     page: number,
     pageSize: number
   ): Promise<string[]> {
-    const objects: MongoObject[] = await this.mongoOutputPort.getMessages(
+    const objects: IData[] = await this.mongoOutputPort.getMessages(
       id,
       page,
       pageSize

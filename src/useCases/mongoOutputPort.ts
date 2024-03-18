@@ -1,13 +1,13 @@
-import { MongoObject } from "../entities/mongoObject";
+import { IData } from "../entities/Data";
 
 interface MongoOutputPort {
   countDatabaseEntries(): Promise<number>;
-  registerMessage(data: MongoObject): Promise<void>;
+  registerMessage(data: IData): Promise<void>;
   getMessages(
     id: string,
     page: number,
     pageSize: number
-  ): Promise<MongoObject[]>;
+  ): Promise<IData[]>;
 }
 
 export { MongoOutputPort };

@@ -1,8 +1,7 @@
 import mongoose, { Model } from "mongoose";
 import dotenv from "dotenv";
 import { MongoOutputPort } from "../useCases/mongoOutputPort";
-import { MongoObject } from "../entities/mongoObject";
-import { mongoSchema } from "../entities/mongoSchema";
+import { IData, Data } from "../entities/Data";
 
 dotenv.config();
 
@@ -18,9 +17,8 @@ class mongoRepository implements MongoOutputPort {
     id: string,
     page: number,
     pageSize: number
-  ): Promise<MongoObject[]> {
-    const response: MongoObject[] = await mongoose
-      .model<MongoObject>("Data", mongoSchema)
+  ): Promise<IData[]> {
+    const response: IData[] = await Data
       .find({ id: id }, { _id: 0 })
       .skip((page - 1) * pageSize)
       .limit(pageSize);
@@ -28,17 +26,12 @@ class mongoRepository implements MongoOutputPort {
   }
 
   async countDatabaseEntries(): Promise<number> {
-    return await mongoose
-      .model<MongoObject>("Data", mongoSchema)
+    return await Data
       .countDocuments();
   }
 
-  async registerMessage(data: MongoObject): Promise<void> {
-    const RequestModel: Model<MongoObject> = mongoose.model<MongoObject>(
-      "Data",
-      mongoSchema
-    );
-    await RequestModel.create(data);
+  async registerMessage(data: IData): Promise<void> {
+    await data.save();
   }
 
   private async connect(): Promise<void> {
