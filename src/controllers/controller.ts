@@ -57,7 +57,7 @@ class Controller {
 
   async getMessages(req: Request, res: Response): Promise<void> {
     try {
-      console.log(`/message`);
+      console.log(`/messages`);
       const id: string = req.sessionID;
       const { page = 1, pageSize = 3 } = req.query as {
         page?: number;

@@ -5,4 +5,4 @@ const mongoSchema: Schema = new Schema({
   message: { type: String, required: true },
 });
 
-export {mongoSchema };
+export { mongoSchema };
